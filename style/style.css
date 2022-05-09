@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  background: black url(../img/green.gif) center center fixed no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header h1 {
+  color: #376ab8;
+  font-size: 3rem;
+  margin: 3rem 2rem 3rem 2rem;
+}
+
+body main div.start_menu {
+  border-radius: 50%;
+  height: 30vw;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+body main div.start_menu a img {
+  height: 30vw;
+  max-height: 350px;
+}
+
+body main div.start_menu a img:hover {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body main a img {
+  height: 5vw;
+}
+
+body footer img {
+  width: 60vw;
+  max-width: 550px;
+  margin: 4rem 2rem 2rem 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  body header h1 {
+    font-size: 3rem;
+    margin: 5rem 2rem 1.5rem 2rem;
+  }
+  body main div.menu a img {
+    margin: 2rem;
+    height: 40vw;
+    min-height: 200px;
+  }
+  body footer img {
+    margin: 5rem 2rem 2rem 2rem;
+    min-width: 300px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

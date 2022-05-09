@@ -1,0 +1,279 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Noto Sans TC", sans-serif;
+}
+body {
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		a {
+			img {
+				height: 10vw;
+				min-height: 75px;
+			}
+		}
+		nav {
+			display: block;
+			width: 100%;
+			background: linear-gradient(90deg, #ffffff, #cdbee5, #ffffff);
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				li {
+					margin: 0.5rem 2rem 0.5rem 2rem;
+					list-style: none;
+					a {
+						font-size: 1.25rem;
+						text-decoration: none;
+						color: rgb(44, 52, 167);
+					}
+				}
+			}
+		}
+	}
+	main {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		background-color: #e7e7e7;
+		section.introdution {
+			background: url(../img/back-wood.png);
+			background-color: #ffffff;
+			width: 50%;
+			h3 {
+				margin: 1rem;
+			}
+			p {
+				padding: 1rem;
+				text-indent: 2rem;
+			}
+		}
+		section.menu1 {
+			background: url(../img/back-wood.png);
+			width: 50%;
+			h3 {
+				margin: 1rem;
+			}
+			div.food {
+				background-color: #e9e4f0;
+				border-radius: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				margin: 1rem;
+				align-items: center;
+				img {
+					margin: 0.5rem;
+					border-radius: 20%;
+					width: 10vw;
+					min-width: 60px;
+				}
+				h3 {
+					font-size: 1.25rem;
+					margin: 1rem;
+				}
+			}
+		}
+	}
+	main.map_main {
+		display: flex;
+		flex-direction: row;
+		padding: 3rem;
+		flex-wrap: wrap;
+		div.ll {
+			flex: 1 1 200px;
+		}
+		section.left {
+			flex: 2 1 250px;
+			h3 {
+				margin: 1rem;
+			}
+			div.map {
+				padding: 0rem 0rem 0rem 1rem;
+				position: relative;
+				iframe {
+					padding: 0rem 0rem 0rem 1rem;
+				}
+			}
+		}
+		section.right {
+			flex: 2 1 250px;
+			padding: 1rem;
+
+			div.info {
+				h3 {
+					padding: 0.5rem;
+				}
+				p {
+					text-indent: 2rem;
+					padding: 0.3rem;
+				}
+			}
+			hr {
+				border: 0;
+				height: 2px;
+				background-image: linear-gradient(
+					to right,
+					rgba(0, 0, 0, 0),
+					rgb(60, 17, 85),
+					rgba(0, 0, 0, 0)
+				);
+			}
+		}
+		div.rr {
+			flex: 1 1 200px;
+		}
+	}
+}
+
+section.table {
+	// flex: 3 1 300px;
+	padding: 1rem;
+	table {
+		border-collapse: collapse;
+		margin: 1rem;
+		tr {
+			border-bottom: 2px solid gray;
+			transition: all 0.3s ease;
+
+			th {
+				font-weight: normal;
+				padding: 1rem;
+			}
+			td {
+				padding: 1rem 2rem;
+				font-size: 1.15rem;
+			}
+			&:hover {
+				background-color: #cccbff;
+				border-bottom: 2px solid rgb(43, 45, 175);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 990px) {
+	body {
+		main.map_main {
+			div.ll {
+				flex: 0 0 10vw;
+			}
+			div.rr {
+				flex: 0 0 10vw;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.map_main {
+		div.ll {
+			display: none;
+		}
+		div.rr {
+			display: none;
+		}
+	}
+	body {
+		main {
+			section.introdution {
+				width: 75%;
+			}
+			section.menu1 {
+				width: 60%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 587px) {
+	.nav_bar {
+		background: linear-gradient(90deg, #c6bee5, #ffffff, #c6bee5);
+		ul {
+			flex-direction: column;
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			li {
+				justify-content: center;
+				border-bottom: 1.5px solid #3150b8;
+				width: 50%;
+				a {
+					font-size: 1rem;
+					padding: 0rem 0rem 0rem 1rem;
+					letter-spacing: 3px;
+				}
+			}
+		}
+	}
+	body {
+		main {
+			section.introdution {
+				width: 80%;
+				h3 {
+					text-align: center;
+				}
+			}
+			section.menu1 {
+				width: 80%;
+				div.food {
+					img {
+						margin: 1rem 0.5rem 0.5rem 0.5rem;
+					}
+					h3 {
+						margin: 0.5rem;
+					}
+				}
+			}
+		}
+	}
+
+	section.table {
+		h3 {
+			text-align: center;
+		}
+		table {
+			margin: 0.2rem;
+			tr {
+				display: flex;
+				flex-wrap: wrap;
+
+				th {
+					flex: 1 1 300px;
+					padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+				}
+				td {
+					flex: 3 1 200px;
+					text-align: center;
+					color: #035252;
+					padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	body {
+		main {
+			section.introdution {
+				width: 100%;
+			}
+			section.menu1 {
+				width: 100%;
+
+				div.food {
+					flex-direction: column;
+				}
+			}
+		}
+	}
+}
